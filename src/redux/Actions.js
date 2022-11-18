@@ -1,8 +1,27 @@
 
-export const connectServer = (val) => {
+export const Rename = (path, newName) => {
   return {
     type: "Rename",
-    value: val
+    path: path,
+    newName: newName
   }
 }
 
+
+// props = {type:"directory", mimeType:"...", size:..., extension:..}
+export const Create = (path, newName, props) => {
+  return {
+    type: "Create",
+    path: path,
+    newName: newName,
+    props: props
+  }
+}
+
+
+export const Delete = (path) => {
+  return {
+    type: "Delete",
+    path: path,
+  }
+}
