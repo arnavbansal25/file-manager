@@ -17,7 +17,7 @@ import { useSelector } from "react-redux";
 function MainComponent() {
   // const [data, setData] = useState(myData);
 
-  const data = useSelector((state: any) => state.data);
+  const data = useSelector((state: any) => state.reducer.data);
 
   return (
     <div
