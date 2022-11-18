@@ -13,6 +13,8 @@ import { isEditable } from "@testing-library/user-event/dist/utils";
 import { download } from "../utils/utilityFunctions";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
+import { useDispatch } from "react-redux";
+import { Rename, Create, Delete } from "../redux/Actions";
 
 interface Props {
   path: string;
@@ -86,11 +88,13 @@ const RecursiveFolder = ({
   const handleKeyDown = (event: any) => {
     if (event.key === "Enter") {
       setIsEditable(false);
+      dispatch(Rename(path, fileName));
     }
   };
 
+  const dispatch = useDispatch();
 
-  console.log("lll", name, isCheckedParent, isSelected);
+  // console.log("lll", name, isCheckedParent, isSelected);
 
   return (
     <>
@@ -102,8 +106,8 @@ const RecursiveFolder = ({
           paddingLeft: `${level * 20}px`,
           backgroundColor: isHover ? "#39373d" : "transparent",
         }}
-        // onMouseOver={mouseOver}
-        // onMouseOut={mouseOut}
+        onMouseOver={mouseOver}
+        onMouseOut={mouseOut}
       >
         <div
           style={{
@@ -165,7 +169,9 @@ const RecursiveFolder = ({
               }}
               type="text"
               value={fileName.split(".")[0]}
-              onChange={(e) => setFileName(e.target.value)}
+              onChange={(e) => {
+                setFileName(e.target.value);
+              }}
               onKeyDown={handleKeyDown}
             />
           ) : (

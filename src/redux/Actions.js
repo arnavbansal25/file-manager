@@ -1,12 +1,18 @@
+export const Visible = (path, visible) => {
+  return {
+    type: "Visible",
+    path: path,
+    visible: visible,
+  };
+};
 
 export const Rename = (path, newName) => {
   return {
     type: "Rename",
     path: path,
-    newName: newName
-  }
-}
-
+    newName: newName,
+  };
+};
 
 // props = {type:"directory", mimeType:"...", size:..., extension:..}
 export const Create = (path, newName, props) => {
@@ -14,14 +20,13 @@ export const Create = (path, newName, props) => {
     type: "Create",
     path: path,
     newName: newName,
-    props: props
-  }
-}
-
+    props: props,
+  };
+};
 
 export const Delete = (path) => {
   return {
     type: "Delete",
     path: path,
-  }
-}
+  };
+};

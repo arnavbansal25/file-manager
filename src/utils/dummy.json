@@ -4,6 +4,7 @@
   "size": 600,
   "type": "directory",
   "level": 1,
+  "isVisible": false,
   "children": [
     {
       "path": "photos/summer",
@@ -11,6 +12,7 @@
       "size": 400,
       "type": "directory",
       "level": 2,
+      "isVisible": false,
       "children": [
         {
           "path": "photos/summer/june",
@@ -18,6 +20,7 @@
           "size": 400,
           "type": "directory",
           "level": 3,
+          "isVisible": false,
           "children": [
             {
               "path": "photos/summer/june/windsurf.jpg",
@@ -26,7 +29,8 @@
               "type": "file",
               "mimeType": "image/jpg",
               "extension": ".jpg",
-              "level": 4
+              "level": 4,
+              "isVisible": false
             }
           ]
         }
@@ -38,6 +42,7 @@
       "size": 200,
       "type": "directory",
       "level": 2,
+      "isVisible": false,
       "children": [
         {
           "path": "photos/winter/january",
@@ -45,6 +50,7 @@
           "size": 200,
           "type": "directory",
           "level": 3,
+          "isVisible": false,
           "children": [
             {
               "path": "photos/winter/january/ski.png",
@@ -53,6 +59,7 @@
               "type": "file",
               "mimeType": "image/png",
               "extension": ".png",
+              "isVisible": false,
               "level": 4
             },
             {
@@ -62,6 +69,7 @@
               "type": "file",
               "mimeType": "image/jpg",
               "extension": ".jpg",
+              "isVisible": false,
               "level": 4
             }
           ]
