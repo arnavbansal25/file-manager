@@ -12,12 +12,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import DownloadIcon from "@mui/icons-material/Download";
 import RecursiveFolder from "./RecursiveFolder";
 
-import { useSelector } from "react-redux";
-
 function MainComponent() {
-  // const [data, setData] = useState(myData);
-
-  const data = useSelector((state: any) => state.reducer.data);
+  const [data, setData] = useState(myData);
 
   return (
     <div
